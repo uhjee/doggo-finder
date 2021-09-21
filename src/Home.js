@@ -10,7 +10,7 @@ const Home = () => {
             <p id="Logo">doggo finder</p>
             <Button
                 onClick={() => alert("클릭")}
-            >시작하기
+            >시작하기!
             </Button>
             <Link to="/research">research로 이동</Link>
         </div>

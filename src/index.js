@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/*
+* index.js : src 폴더에 포함되어 있다. 메인 프로그램이라고 할 수 있다. 여기서 HTML 템플릿 및 js컴포넌트 조합ㅎㅏ여 렌더링
+* App.js : src 폴더에 포함되어 있고, 컴포넌트를 정의하는 프로그램이다.
+* index.html : public 폴더에 있고 메인 프로그램인 index.js에 대응되는 것으로 HTML 템플릿 파일이다.y
+* */
 ReactDOM.render(
   <React.StrictMode>
     <App />

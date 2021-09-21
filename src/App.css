@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+p {
+  font-family: 'SBAggroB';
+}
+#Logo {
+  font-size: 20px;
+}
+div {
+  justify-content: center;
+  text-align: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +45,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

@@ -1,19 +1,19 @@
 import './App.scss';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import Home from './Home';
-import Research from './Research';
-import Result from './Result';
-import React from "react"; // npm install react-router-dom 로 설치
+import Home from './view/Home';
+import Research from './view/Research';
+import Result from './view/Result';
+import React, { useState } from "react"; // npm install react-router-dom 로 설치
 
 function App() {
+    const [state, setState] = useState("home");
   return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/research" component={Research} />
-          <Route path="/result" component={Result} />
-        </Switch>
-      </BrowserRouter>
+      <>
+          <div className="main-container">
+              { state === 'home' && <Home/> }
+              { state === 'research' && <Research /> }
+              { state === 'result' && <Result /> }
+          </div>
+      </>
   );
 }
 

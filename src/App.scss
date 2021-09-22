@@ -6,11 +6,16 @@
 .main-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 18.6rem;
   margin-bottom: 3rem;
   text-align: center;
+
+  .main-container__inner {
+    width: 29.2rem;
+  }
 }
 
 @font-face {

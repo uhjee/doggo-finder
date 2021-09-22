@@ -5,7 +5,7 @@ import Result from './view/Result';
 import React, { useState } from "react"; // npm install react-router-dom 로 설치
 
 function App() {
-    const [state, setState] = useState("home");
+    const [state, setState] = useState("research");
   return (
       <>
           <div className="main-container">

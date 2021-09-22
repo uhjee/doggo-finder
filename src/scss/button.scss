@@ -1,3 +1,5 @@
+@import './variable.scss';
+
 .button {
     width: 100%;
     display: flex;
@@ -7,4 +9,5 @@
     border-radius: 6px;
     padding: 15px 0;
     margin: 10px 15px;
+    background-color: $dark-red;
 }

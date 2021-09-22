@@ -1,7 +1,7 @@
 @import './variable.scss';
 
 .button {
-    width: 90%;
+    width: 23rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +9,8 @@
     border-radius: 10px;
     background-color: $dark-red;
     color: #fff;
+    font-family: 'HSGaeulSenggak20';
+    font-weight: 500;
 
     padding: 15px 0;
     margin: 10px 15px;

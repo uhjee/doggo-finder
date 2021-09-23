@@ -1,7 +1,6 @@
-
 .main-container {
   width: 100%;
-  height:100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +11,21 @@
   }
 }
 
+// TEXT 관련
+.text--big {
+  font-size: 1.4rem;
+}
+.text--small {
+  font-size: 0.87rem;
+}
+.text--smaller {
+  font-size: 0.73rem;
+}
 
+
+.text--grey {
+  color: #999;
+}
 
 @font-face {
   font-family: 'HSGaeulSenggak20';

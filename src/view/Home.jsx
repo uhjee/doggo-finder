@@ -6,7 +6,8 @@ import { APP_STATE } from '../constant/stringEnum.js';
 const Home = ({ setState }) => {
   const onStartClick = () => {
     console.log('click');
-    setState(APP_STATE.RESEARCH);
+    // setState(APP_STATE.RESEARCH);
+    setState(APP_STATE.RESULT); // TODO:uhjee Test용
   };
 
   return (
@@ -18,7 +19,7 @@ const Home = ({ setState }) => {
               내 성격과 가장 잘 맞는 강아지 종류는 뭘까?
             </p>
             <p className="text--small text--grey">
-              내와 딱 맞는 강아지 찾기 테스트
+              나와 딱 맞는 강아지 찾기 테스트
             </p>
           </div>
           <h2>doggo Finder</h2>

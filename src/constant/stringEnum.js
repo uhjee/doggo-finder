@@ -3,3 +3,9 @@ export const APP_STATE = {
   RESEARCH: 'RESEARCH',
   RESULT: 'RESULT',
 };
+
+export const RESULT_VIEWTYPE = {
+  PROGRESSIVE_BAR: 1,
+  CONFIRM: 2,
+  DESCRIPTION: 3,
+};

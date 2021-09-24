@@ -11,7 +11,7 @@ export const CONTENTS = [
             {
                 "id": "a1",
                 "title": "답변 2",
-                "value": "E"
+                "value": "I"
             },
             {
                 "id": "a2",
@@ -27,17 +27,17 @@ export const CONTENTS = [
             {
                 "id": "b0",
                 "title": "답변 2-1",
-                "value": "E"
+                "value": "S"
             },
             {
                 "id": "b1",
                 "title": "답변 2-2",
-                "value": "E"
+                "value": "N"
             },
             {
                 "id": "b2",
                 "title": "답변 2-3",
-                "value": "E"
+                "value": "N"
             }
         ]
     },
@@ -48,17 +48,38 @@ export const CONTENTS = [
             {
                 "id": "c0",
                 "title": "답변 3-1",
-                "value": "E"
+                "value": "T"
             },
             {
                 "id": "c1",
                 "title": "답변 3-2",
-                "value": "E"
+                "value": "F"
             },
             {
                 "id": "c2",
                 "title": "답변 3-3",
-                "value": "E"
+                "value": "T"
+            }
+        ]
+    },
+    {
+        "page": 3,
+        "title":"질문4",
+        "answerList": [
+            {
+                "id": "d0",
+                "title": "답변 3-1",
+                "value": "P"
+            },
+            {
+                "id": "d1",
+                "title": "답변 3-2",
+                "value": "P"
+            },
+            {
+                "id": "d2",
+                "title": "답변 3-3",
+                "value": "J"
             }
         ]
     }

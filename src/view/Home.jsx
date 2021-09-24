@@ -6,8 +6,8 @@ import { APP_STATE } from '../constant/stringEnum.js';
 const Home = ({ setState }) => {
   const onStartClick = () => {
     console.log('click');
-    // setState(APP_STATE.RESEARCH);
-    setState(APP_STATE.RESULT); // TODO:uhjee Test용
+    setState(APP_STATE.RESEARCH);
+    //setState(APP_STATE.RESULT); // TODO:uhjee Test용
   };
 
   return (

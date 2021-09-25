@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Answer from "@components/Answer";
+import Answer from "components/Answer";
 import { CONTENTS } from '../constant/question.js';
 import { APP_STATE } from '../constant/stringEnum.js';
 

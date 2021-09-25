@@ -1,0 +1,21 @@
+.result-container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+
+  .img {
+    width: 250px;
+    height: 250px;
+
+    font-size: 0.9rem;
+
+    background-size: contain;
+    &.img_progressive__00 {
+      background-image: url(../assets//images/doggo_progressive_00.png);
+    }
+    &.img_progressive__01 {
+      background-image: url(../assets//images/doggo_progressive_01.png);
+    }
+  }
+}

@@ -5,7 +5,7 @@ export const APP_STATE = {
 };
 
 export const RESULT_VIEWTYPE = {
-  PROGRESSIVE_BAR: 1,
-  CONFIRM: 2,
-  DESCRIPTION: 3,
+  PROGRESSIVE_BAR: 0,
+  CONFIRM: 1,
+  DESCRIPTION: 2,
 };

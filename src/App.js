@@ -9,12 +9,13 @@ import Result from 'view/result';
 
 function App() {
   const [state, setState] = useState(APP_STATE.HOME);
+  const [type, setType] = useState("");
   return (
     <>
       <div className="main-container">
         {state === APP_STATE.HOME && <Home setState={setState} />}
-        {state === APP_STATE.RESEARCH && <Research setState={setState} />}
-        {state === APP_STATE.RESULT && <Result setState={setState} />}
+        {state === APP_STATE.RESEARCH && <Research setState={setState} setType={setType} />}
+        {state === APP_STATE.RESULT && <Result setState={setState} type={type}/>}
       </div>
     </>
   );

@@ -5,7 +5,7 @@ import { APP_STATE } from 'constant/stringEnum';
 
 import Home from 'view/Home';
 import Research from 'view/Research';
-import Result from 'view/Result';
+import Result from 'view/result';
 
 function App() {
   const [state, setState] = useState(APP_STATE.HOME);

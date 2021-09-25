@@ -4,7 +4,7 @@ import { CONTENTS } from 'constant/question.js';
 import { APP_STATE } from 'constant/stringEnum.js';
 
 
-export default function Research({ setState }) {
+export default function Research({ setState, setType }) {
     const [page, setPage] = useState(0 );
     const [point, setPoint] = useState({
         I: 0,
@@ -16,9 +16,16 @@ export default function Research({ setState }) {
         P: 0,
         J: 0
     });
-    const item = CONTENTS.filter(item => item.page === page)[0];
-    const selectAnswer = (value) => {
-        addPoint(value)
+
+    const question = CONTENTS.filter(item => item.page === page)[0];
+
+    /**
+     * addPoint 호출 후 page를 바꾼다
+     * @author ohmjeemin
+     * @param type [String] type
+     */
+    const selectAnswer = type => {
+        addPoint(type)
         if(page === CONTENTS.length-1) {
             setState(APP_STATE.RESULT);
             getType();
@@ -27,43 +34,54 @@ export default function Research({ setState }) {
             setPage(page+1);
         }
     }
-    const addPoint = (v) => {
-        point[v] += 5
+
+    /**
+     * 선택한 응답에 대한 타입에 점수를 더한다
+     * @author ohmjeemin
+     * @param type [String] type
+     */
+    const addPoint = type => {
+        point[type] += 5
         setPoint(point);
     }
+
+    /**
+     * 점수를 통해 type을 얻는다
+     * @author ohmjeemin
+     */
     const getType = () => {
-        const pointList = Object.values(point);
-        const list = [];
+        const pointValueList = Object.values(point);
+        const selectedTypeIndexList = [];
         let arr = [];
         let temp = 0;
-        let result = "";
+        let resultType= "";
 
-        pointList.forEach((p, idx) => {
+        pointValueList.forEach((point, idx) => {
             arr.push({
-                "p": p,
+                "p": point,
                 "idx": idx
             });
             temp++;
-            if(temp===2) {
-                list.push(arr[0].p > arr[1].p ? arr[0].idx : arr[1].idx);
+            if(temp === 2) {
+                selectedTypeIndexList.push(arr[0].p > arr[1].p ? arr[0].idx : arr[1].idx);
                 arr = [];
                 temp = 0;
             }
         })
 
         const pointKeyList = Object.keys(point);
-        list.forEach(li => {
-            result += pointKeyList[li]
+        selectedTypeIndexList.forEach(li => {
+            resultType += pointKeyList[li]
         });
 
-        console.log("결과는 ----",result)
+        setType(resultType);
     }
 
     return (
         <div>
-            <p>{item.title}</p>
+            <p>{question.title}</p>
             <div>
-                {item.answerList.map(answer => <Answer key={answer.id} text={answer.title} handler={() => selectAnswer(answer.value)}/>)}
+                {question.answerList.map(answer => <Answer key={answer.id} text={answer.title} handler={() => selectAnswer(answer.value)}/>)}
             </div>
         </div>
     )

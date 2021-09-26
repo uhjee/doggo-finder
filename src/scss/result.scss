@@ -18,4 +18,30 @@
       background-image: url(../assets//images/doggo_progressive_01.png);
     }
   }
+
+  .desc-title {
+    margin-bottom: 150px;
+  }
+
+  .desc-box {
+    margin: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    .desc-box__img {
+      width: 200px;
+      height: 200px;
+
+      position: absolute;
+      top: -6rem;
+    }
+
+    .desc-box__text {
+      padding: 7.5rem 20px 10px 20px;
+    }
+  }
 }

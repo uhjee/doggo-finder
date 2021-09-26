@@ -21,7 +21,7 @@ const Progressive = ({ setView }) => {
   useEffect(() => {
     setTimeout(() => {
       setView(RESULT_VIEWTYPE.CONFIRM);
-    }, 5000);
+    }, 3000);
   }, []);
 
   return (
@@ -32,7 +32,8 @@ const Progressive = ({ setView }) => {
       {!isNil(imageNum) && imageNum === 1 && (
         <div className="img img_progressive__01"></div>
       )}
-      <div className="text--grey"> 강아지가 달려오는 중입니다... </div>
+      <div className="text--grey"> 당신의 강아지가 달려오는 중입니다... </div>
+      <p className="text--smaller text--grey">Designed by ohmjeemin🧡uhjee</p>
     </>
   );
 };

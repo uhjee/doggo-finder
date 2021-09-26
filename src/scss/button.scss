@@ -1,17 +1,19 @@
 @import './variable.scss';
 
 .button {
-    width: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid $light-grey;
-    border-radius: 10px;
-    background-color: $dark-red;
-    color: #fff;
-    font-family: 'HSGaeulSenggak20';
-    font-weight: 500;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $light-grey;
+  border-radius: 10px;
+  background-color: $dark-red;
+  color: #fff;
+  font-family: 'HSGaeulSenggak20';
+  font-weight: 500;
 
-    padding: 15px 0;
-    margin: 10px 15px;
+  padding: 15px 0;
+  margin: 10px 15px;
+
+  cursor: pointer;
 }

@@ -5,6 +5,7 @@ import { isNil } from 'utils/commonUtil';
 import { RESULT_VIEWTYPE } from 'constant/stringEnum';
 
 import Progressive from 'view/result/progressive';
+import Confirm from 'view/result/confirm';
 import Description from 'view/result/description';
 
 const Result = () => {
@@ -13,7 +14,7 @@ const Result = () => {
     <>
       <div className="result-container">
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}
-        {!isNil(view) && view === 1 && <p>안녕하세요 result1이다!</p>}
+        {!isNil(view) && view === 1 && <Confirm setView={setView} />}
         {!isNil(view) && view === 2 && <Description />}
       </div>
     </>

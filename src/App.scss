@@ -1,3 +1,5 @@
+@import './scss/variable.scss';
+
 .main-container {
   width: 100%;
   height: 100vh;
@@ -19,12 +21,23 @@
   font-size: 0.87rem;
 }
 .text--smaller {
-  font-size: 0.73rem;
+  font-size: 0.68rem;
 }
-
 
 .text--grey {
   color: #999;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  color: $dark-red;
+  font-family: 'HSGaeulSenggak20';
+}
+
+h3 {
+  margin-bottom: 40px;
+  font-size: 1.3rem;
 }
 
 @font-face {

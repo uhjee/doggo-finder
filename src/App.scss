@@ -25,7 +25,11 @@
 }
 
 .text--grey {
-  color: #999;
+  color: $grey;
+}
+
+.text--white {
+  color: $white;
 }
 
 h2 {

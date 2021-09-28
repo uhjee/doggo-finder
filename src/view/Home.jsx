@@ -1,14 +1,14 @@
 import React from 'react';
 import Button from 'components/Button';
 
-import 'scss/home.scss';
+import 'scss/Home.scss';
 
 import { APP_STATE } from 'constant/stringEnum.js';
 
 const Home = ({ setState }) => {
   const onStartClick = () => {
-    // setState(APP_STATE.RESEARCH);
-    setState(APP_STATE.RESULT); // TODO:uhjee Test용
+     setState(APP_STATE.RESEARCH);
+    //setState(APP_STATE.RESULT); // TODO:uhjee Test용
   };
 
   return (

@@ -23,7 +23,7 @@ const Answer = ({ text, handler }) => {
         return element;
     };
     const title = useClick(handler);
-    return <div ref={title}>{ text }</div>;
+    return <div ref={title} className={"answer"}>{ text }</div>;
 }
 
 export default Answer;

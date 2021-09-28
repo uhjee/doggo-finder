@@ -44,10 +44,35 @@ h3 {
   font-size: 1.3rem;
 }
 
+.research {
+  padding: 0 20px;
+}
+.question {
+  font-family: 'ONE-Mobile-POP';
+  font-size: 20px;
+  text-align: center;
+}
+.answer {
+  border: 1px solid #c72e45;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+}
+
 @font-face {
   font-family: 'HSGaeulSenggak20';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff')
     format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ONE-Mobile-POP';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

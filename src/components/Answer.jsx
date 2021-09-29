@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import '../scss/button.scss';
+import '../scss/Answer.scss';
 
 
 const Answer = ({ text, handler }) => {

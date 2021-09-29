@@ -12,7 +12,11 @@ const Result = () => {
   const [view, setView] = useState(RESULT_VIEWTYPE.PROGRESSIVE_BAR);
   return (
     <>
-      <div className="result-container">
+      <div
+        className={`result-container${
+          view === RESULT_VIEWTYPE.DESCRIPTION ? ' blue' : ''
+        }`}
+      >
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}
         {!isNil(view) && view === 1 && <Confirm setView={setView} />}
         {!isNil(view) && view === 2 && <Description />}

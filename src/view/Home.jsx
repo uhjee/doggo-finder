@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'components/Button';
 
-import 'scss/home.scss';
+import '../scss/Home.scss';
 
 import { APP_STATE } from 'constant/stringEnum.js';
 

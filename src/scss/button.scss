@@ -5,9 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid $light-grey;
+
+  box-sizing: border-box;
+  // border: 2px solid $light-grey;
   border-radius: 10px;
-  background-color: $dark-red;
+  outline: none;
+  background-color: $sand-shell;
   color: #fff;
   font-family: 'HSGaeulSenggak20';
   font-weight: 500;

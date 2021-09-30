@@ -80,6 +80,7 @@ export default function Research({ setState, setType }) {
 
     return (
         <div className={"research"}>
+            <div className={"progress"}></div>
             <p className={"question"}>{question.title}</p>
             <div>
                 {question.answerList.map(answer => <Answer key={answer.id} text={answer.title} handler={() => selectAnswer(answer.value)}/>)}

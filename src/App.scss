@@ -46,13 +46,20 @@ h3 {
 
 .research {
   padding: 0 20px;
+  width: 85%;
+  margin-bottom: 160px;
 }
 .question {
   font-size: 20px;
   text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
-
-
+.progress {
+  border: 1px solid #7b6f66;
+  border-radius: 10px;
+  height: 10px;
+}
 @font-face {
   font-family: 'HSGaeulSenggak20';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff')

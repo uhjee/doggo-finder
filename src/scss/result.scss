@@ -5,7 +5,7 @@
   align-items: center;
 
   &.blue {
-    background-color: royalblue;
+    background-color: #567149;
   }
   .img {
     width: 250px;
@@ -15,10 +15,10 @@
 
     background-size: contain;
     &.img_progressive__00 {
-      background-image: url(../assets//images/doggo_progressive_00.png);
+      background-image: url(../assets/images/doggo_progressive_00.png);
     }
     &.img_progressive__01 {
-      background-image: url(../assets//images/doggo_progressive_01.png);
+      background-image: url(../assets/images/doggo_progressive_01.png);
     }
   }
   .desc-container {
@@ -46,15 +46,16 @@
       font-size: 0.9rem;
 
       .desc-box__img {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
+        background-size: contain;
 
         position: absolute;
-        top: -6rem;
+        top: -7.5rem;
       }
 
       .desc-box__text {
-        padding: 7.5rem 20px 10px 20px;
+        padding: 6.5rem 20px 10px 20px;
       }
     }
   }

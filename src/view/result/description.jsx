@@ -1,6 +1,9 @@
 import React from 'react';
+import image from 'assets/images/dogs/dog_dachshund.png';
 
 const Description = () => {
+  // const imagePath = './resources/img/banners/3.jpg';
+  // const imagePath = '../assets/images/dogs/dog_dachshund.png';
   return (
     <>
       <div className="desc-container">
@@ -13,7 +16,9 @@ const Description = () => {
         <div className="desc-box">
           <div
             className="desc-box__img"
-            style={{ backgroundColor: 'red' }}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
           ></div>
           <div className="desc-box__text">
             너무나도 귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
@@ -27,9 +32,10 @@ const Description = () => {
             <br />
             너무나도 귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
             강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도
-            귀여운 강아지죠.너무나도 귀여운 강아지죠.아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
+            귀여운 강아지죠.너무나도 귀여운 강아지죠.아지죠.너무나도 귀여운
             강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도
-            귀여운 강아지죠.너무나도 귀여운 강아지죠.아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
+            귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
+            강아지죠.아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운
             강아지죠.너무나도 귀여운 강아지죠.너무나도 귀여운 강아지죠.너무나도
             귀여운 강아지죠.너무나도 귀여운 강아지죠.
           </div>

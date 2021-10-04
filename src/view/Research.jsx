@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Answer from "components/Answer";
+import Progress from "components/Progress";
 
 import { CONTENTS } from 'constant/question.js';
 import { APP_STATE } from 'constant/stringEnum.js';
@@ -17,7 +18,7 @@ export default function Research({ setState, setType }) {
         P: 0,
         J: 0
     });
-
+    const [rate, setRate] = useState(0);
     const question = CONTENTS.filter(item => item.page === page)[0];
 
     /**
@@ -26,13 +27,14 @@ export default function Research({ setState, setType }) {
      * @param type [String] type
      */
     const selectAnswer = type => {
-        addPoint(type)
+        addPoint(type);
+        updateRate();
         if(page === CONTENTS.length-1) {
             setState(APP_STATE.RESULT);
             getType();
         }
         else {
-            setPage(page+1);
+            setPage(page + 1);
         }
     }
 
@@ -78,9 +80,16 @@ export default function Research({ setState, setType }) {
         setType(resultType);
     }
 
+    const updateRate = () => {
+        const rate = ((page + 1) / CONTENTS.length) * 100
+        setRate(rate)
+        console.log(page, '===', CONTENTS.length)
+        console.log('rate===', rate)
+    }
+
     return (
         <div className={"research"}>
-            <div className={"progress"}></div>
+            <Progress rate={rate}/>
             <p className={"question"}>{question.title}</p>
             <div>
                 {question.answerList.map(answer => <Answer key={answer.id} text={answer.title} handler={() => selectAnswer(answer.value)}/>)}

@@ -48,7 +48,7 @@ h3 {
   padding: 0 20px;
   width: 85%;
   max-width: 400px;
-  margin-bottom: 160px;
+  margin-bottom: 120px;
 }
 .question {
   font-size: 20px;
@@ -60,9 +60,10 @@ h3 {
   border: 1px solid #7b6f66;
   border-radius: 10px;
   height: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
 }
 .progress.painted {
+  height: 8px;
   background-color: $brown;
 }
 .progress .dog {

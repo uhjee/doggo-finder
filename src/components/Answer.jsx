@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import '../scss/button.scss';
-import '../scss/Answer.scss';
+import '../scss/answer.scss';
 
 
 const Answer = ({ text, handler }) => {

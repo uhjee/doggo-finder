@@ -8,7 +8,7 @@ import Progressive from 'view/result/progressive';
 import Confirm from 'view/result/confirm';
 import Description from 'view/result/description';
 
-const Result = () => {
+const Result = ({ type }) => {
   const [view, setView] = useState(RESULT_VIEWTYPE.PROGRESSIVE_BAR);
   return (
     <>
@@ -19,7 +19,7 @@ const Result = () => {
       >
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}
         {!isNil(view) && view === 1 && <Confirm setView={setView} />}
-        {!isNil(view) && view === 2 && <Description />}
+        {!isNil(view) && view === 2 && <Description type={type} />}
       </div>
     </>
   );

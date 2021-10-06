@@ -6,10 +6,13 @@
   font-style: normal;
 }
 .answer {
-  border: 1px solid #7b6f66;
+  border: 2px solid #7b6f66;
   padding: 14px 8px;
   border-radius: 10px;
   margin-bottom: 10px;
   text-align: center;
   background-color: #ffffff;
+}
+.answer:hover {
+  background-color: #E2C6A8;
 }

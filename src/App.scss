@@ -34,9 +34,10 @@
 
 h2 {
   margin-bottom: 40px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: $brown;
   font-family: 'HSGaeulSenggak20';
+  font-weight: bolder;
 }
 
 h3 {
@@ -50,6 +51,8 @@ h3 {
   max-width: 400px;
 }
 .question {
+  color: #333333;
+  font-family: 'InfinitySans-CondBoldA1';
   font-size: 20px;
   text-align: center;
   font-weight: 600;
@@ -58,12 +61,12 @@ h3 {
 .progress {
   border: 1px solid #7b6f66;
   border-radius: 10px;
-  height: 10px;
+  height: 8px;
   margin-bottom: 85px;
   background-color: #ffffff;
 }
 .progress.painted {
-  height: 8px;
+  height: 6px;
   background-color: $brown;
 }
 .progress .dog {
@@ -79,6 +82,13 @@ h3 {
   font-family: 'HSGaeulSenggak20';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff')
     format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InfinitySans-CondBoldA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-CondBoldA1.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

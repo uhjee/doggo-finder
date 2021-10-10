@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'components/Button';
+import Share from 'components/Share';
 
 import '../scss/home.scss';
 
@@ -26,6 +27,7 @@ const Home = ({ setState }) => {
           <h2>doggo Finder</h2>
         </div>
         <Button text="START" handler={onStartClick} />
+        <Share/>
         <p className="text--smaller text--grey">Designed by ohmjeemin🧡uhjee</p>
       </div>
     </>

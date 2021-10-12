@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import image from 'assets/images/dogs/dog_dachshund.png';
+import IMAGE_ISTJ from 'assets/images/dogs/dog_labrador.png';
 
 import { isNil } from 'utils/commonUtil';
 
@@ -10,7 +11,7 @@ const Description = ({ type }) => {
 
   const RESULT_DESC_INFO = {
     ISTJ: {
-      image: image,
+      image: IMAGE_ISTJ,
       subTitle: 'ISTJ <br/>언제나 싱글벙글! <br /> 해맑게 웃는 표정!',
       title: '레브라도 리트리버',
       descText:
@@ -87,7 +88,7 @@ const Description = ({ type }) => {
         '너무나도 귀여운 강아지라구요. 너무나도 귀여운 강아지라구요. <br /><br /> 너무나도 귀여운 강아지라구요.  너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요. 너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.<br /> 너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.너무나도 귀여운 강아지라구요.',
     },
     ESFJ: {
-      image: image,
+      image: IMAGE_ISTJ,
       subTitle: 'ESFJ <br/>언제나 싱글벙글! <br /> 해맑게 웃는 표정!',
       title: '레브라도 리트리버',
       descText:

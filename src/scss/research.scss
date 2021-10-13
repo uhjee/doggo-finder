@@ -14,28 +14,43 @@
   margin-bottom: 50px;
 }
 .progress {
-  border: 1px solid #7b6f66;
+  border: 1px solid #F1F1E5;
   border-radius: 10px;
-  height: 8px;
+  height: 4px;
   margin-bottom: 85px;
-  background-color: #ffffff;
+  background-color: #F1F1E5;
   position:relative;
 }
 .progress.painted {
-  height: 6px;
-  background-color: $brown;
+  height: 2px;
+  background-color: #F1F1E5;
 }
 .progress .dog {
   position: absolute;
-  background-image: url("../assets/images/dog-progress.png");
-  width: 50px;
-  height: 50px;
-  background-size: 65px 65px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin:-25px 0 0 -16px;
+  background-image: url("../assets/images/progress_image.png");
+  width: 65px;
+  height: 65px;
+  background-position-x: -122px;
+  margin:-40px 0 0 4px;
 }
-
+.progress .goal {
+  position: absolute;
+  right: 0;
+  background-image: url("../assets/images/progress_image.png");
+  width: 43px;
+  height: 50px;
+  background-position-x: -67px;
+  margin:-40px -10px 0 -16px;
+}
+.progress .home {
+  position: absolute;
+  left: 0;
+  background-image: url("../assets/images/progress_image.png");
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  margin:-40px 0 0 -5px;
+}
 @font-face {
   font-family: 'InfinitySans-CondBoldA1';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-CondBoldA1.woff') format('woff');

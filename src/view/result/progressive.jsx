@@ -27,10 +27,10 @@ const Progressive = ({ setView }) => {
   return (
     <>
       {!isNil(imageNum) && imageNum === 0 && (
-        <div className="img img_progressive__00"></div>
+        <div className="waiting_img img_waiting__00"></div>
       )}
       {!isNil(imageNum) && imageNum === 1 && (
-        <div className="img img_progressive__01"></div>
+        <div className="waiting_img img_waiting__01"></div>
       )}
       <div className="text--grey"> 당신의 강아지가 달려오는 중입니다... </div>
       <p className="text--smaller text--grey">Designed by ohmjeemin🧡uhjee</p>

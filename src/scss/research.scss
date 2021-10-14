@@ -14,16 +14,15 @@
   margin-bottom: 50px;
 }
 .progress {
-  border: 1px solid #F1F1E5;
   border-radius: 10px;
   height: 4px;
   margin-bottom: 85px;
-  background-color: #F1F1E5;
+  background-color: #ffffff;
   position:relative;
 }
 .progress.painted {
   height: 2px;
-  background-color: #F1F1E5;
+  background-color: $brown;
 }
 .progress .dog {
   position: absolute;
@@ -49,7 +48,7 @@
   width: 65px;
   height: 65px;
   z-index: 1;
-  margin:-40px 0 0 -5px;
+  margin:-40px 0 0 -14px;
 }
 @font-face {
   font-family: 'InfinitySans-CondBoldA1';

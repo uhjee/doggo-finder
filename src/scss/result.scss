@@ -7,18 +7,17 @@
   &.blue {
     background-color: #567149;
   }
-  .img {
-    width: 250px;
-    height: 250px;
+  .waiting_img {
+    width: 200px;
+    height: 200px;
 
     font-size: 0.9rem;
+    background-image: url(../assets/images/waiting_image.png);
 
-    background-size: contain;
-    &.img_progressive__00 {
-      background-image: url(../assets/images/doggo_progressive_00.png);
+    &.img_waiting__00 {
     }
-    &.img_progressive__01 {
-      background-image: url(../assets/images/doggo_progressive_01.png);
+    &.img_waiting__01 {
+      background-position: -200px;
     }
   }
   .desc-container {

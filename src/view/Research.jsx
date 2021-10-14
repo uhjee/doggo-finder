@@ -22,6 +22,7 @@ export default function Research({ setState, setType }) {
         J: 0
     });
     const [rate, setRate] = useState(0);
+    const [prev, setPrev] = useState(0);
     const question = CONTENTS.filter(item => item.page === page)[0];
 
     /**
@@ -86,13 +87,15 @@ export default function Research({ setState, setType }) {
     const updateRate = () => {
         const rate = ((page + 1) / CONTENTS.length) * 100
         setRate(rate)
+        const temp =  prev + 1
+        setPrev(temp)
         console.log(page, '===', CONTENTS.length)
         console.log('rate===', rate)
     }
 
     return (
         <div className={"research"}>
-            <Progress rate={rate}/>
+            <Progress rate={rate} prev={prev}/>
             <div style={{ height:"400px" }}>
                 <p className={"question"}>{question.title}</p>
                 <div>

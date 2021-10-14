@@ -14,6 +14,7 @@
   margin-bottom: 50px;
 }
 .progress {
+  border: 1px solid #ffffff;
   border-radius: 10px;
   height: 4px;
   margin-bottom: 85px;
@@ -22,14 +23,22 @@
 }
 .progress.painted {
   height: 2px;
-  background-color: $brown;
+  background-color: #c3c3c3;
 }
 .progress .dog {
   position: absolute;
   background-image: url("../assets/images/progress_image.png");
   width: 65px;
   height: 65px;
-  background-position-x: -122px;
+  background-position-x: -134px;
+  margin:-35px 0 0 4px;
+}
+.progress .dog2 {
+  position: absolute;
+  background-image: url("../assets/images/progress_image.png");
+  width: 65px;
+  height: 65px;
+  background-position-x: -200px;
   margin:-35px 0 0 4px;
 }
 .progress .goal {

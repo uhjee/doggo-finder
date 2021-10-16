@@ -23,9 +23,9 @@ export const useClick = onClick => {
 };
 
 export const useInterval = (callback, delay) => {
+  // useRef를 사용해 가장 마지막 콜백 기억
   const savedCallback = useRef();
 
-  // useRef를 사용해 가장 마지막 콜백 기억
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);

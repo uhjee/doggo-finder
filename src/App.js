@@ -1,6 +1,6 @@
 import './App.scss';
 import React, { useState } from 'react'; // npm install react-router-dom 로 설치
-
+import Layout from '../src/components/Layout'
 import { APP_STATE } from 'constant/stringEnum';
 
 import Home from 'view/Home';
@@ -17,6 +17,7 @@ function App() {
         {state === APP_STATE.RESEARCH && <Research setState={setState} setType={setType} />}
         {state === APP_STATE.RESULT && <Result setState={setState} type={type}/>}
       </div>
+        <Layout />
     </>
   );
 }

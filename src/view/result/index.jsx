@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { isNil } from 'utils/commonUtil';
 import { RESULT_VIEWTYPE } from 'constant/stringEnum';
@@ -14,7 +14,7 @@ const Result = ({ type }) => {
     <>
       <div
         className={`result-container${
-          view === RESULT_VIEWTYPE.DESCRIPTION ? ' blue' : ''
+          view === RESULT_VIEWTYPE.DESCRIPTION ? ' olive' : ''
         }`}
       >
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}

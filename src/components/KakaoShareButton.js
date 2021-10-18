@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 
-const logo512 = __dirname + 'public/logo512.png';
-
-console.log(process.env.PUBLIC_URL + logo512);
-console.log(process.env);
 const KakaoShareButton = () => {
   useEffect(() => {
     createKakaoButton();
@@ -25,8 +21,10 @@ const KakaoShareButton = () => {
           title: '스트리트 도고 파인더',
           description:
             '내 성격과 가장 잘 맞는 강아지 종류는 뭘까? 나와 딱 맞는 강아지 찾기 테스트',
-        //   imageUrl: process.env.REACT_FETCH_URL + logo512,
-          imageUrl: 'http://localhost:3000' + logo512,
+          //   imageUrl: process.env.REACT_FETCH_URL + logo512,
+
+          imageUrl:
+            process.env.REACT_FETCH_URL + __dirname + 'public/logo512.png',
           // i.e. process.env.FETCH_URL + /logo.png'
           link: {
             mobileWebUrl: window.location.href,

@@ -22,7 +22,11 @@
   background-position-x: -134px;
 }
 .progress.painted {
-  background-color: #c3c3c34f;
+  background-image: url("../assets/images/dust.png");
+  height: 20px;
+  background-size: 65px 65px;
+  background-position-x: 30px;
+  background-position-y: 27px;
 }
 .progress.painted .dirt {
   position: absolute;

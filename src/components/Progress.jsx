@@ -9,7 +9,7 @@ export default function Progress({ rate, prev }){
         <div className={"progress"}>
             <div className={"home"}/>
             <div className={"goal"}/>
-            <div className={"progress painted"} style={{width:progressRate, display:"inline-block"}} />
+            <div className={"progress painted"} style={{width:progressRate, display:"inline-block"}}/>
             <div className={dogStyle} style={{ display:"inline-block" }} />
         </div>
     )

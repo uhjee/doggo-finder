@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 
-const logo512 = __dirname + 'public/logo512.png';
-
 const KakaoShareButton = () => {
   useEffect(() => {
     createKakaoButton();
@@ -24,7 +22,9 @@ const KakaoShareButton = () => {
           description:
             '내 성격과 가장 잘 맞는 강아지 종류는 뭘까? 나와 딱 맞는 강아지 찾기 테스트',
           //   imageUrl: process.env.REACT_FETCH_URL + logo512,
-          imageUrl: process.env.REACT_FETCH_URL + logo512,
+
+          imageUrl:
+            process.env.REACT_FETCH_URL + __dirname + 'public/logo512.png',
           // i.e. process.env.FETCH_URL + /logo.png'
           link: {
             mobileWebUrl: window.location.href,

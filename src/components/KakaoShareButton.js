@@ -21,7 +21,8 @@ const KakaoShareButton = () => {
           title: '스트리트 도고 파인더',
           description:
             '내 성격과 가장 잘 맞는 강아지 종류는 뭘까? 나와 딱 맞는 강아지 찾기 테스트',
-          imageUrl: process.env.REACT_APP_FETCH_URL + '/logo512.png',
+          imageUrl: 'https://cranky-mclean-5611df.netlify.app/logo528.png',
+          // imageUrl: 'https://cdn.pixabay.com/photo/2020/04/01/01/02/science-4989678_960_720.png',
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,

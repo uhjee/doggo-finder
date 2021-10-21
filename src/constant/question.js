@@ -1,7 +1,7 @@
 export const CONTENTS = [
     {
         "page": 0,
-        "title":"급한 업무가 추가되어 예정된 할 일이 주르륵 밀리게 되는데...",
+        "title":"급한 업무<br>가 추가되어 예정된 할 일이 주르륵 밀리게 되는데...",
         "answerList": [
             {
                 "id": "a0",

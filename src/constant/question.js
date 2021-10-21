@@ -1,7 +1,7 @@
 export const CONTENTS = [
     {
         "page": 0,
-        "title":"급한 업무<br>가 추가되어 예정된 할 일이 주르륵 밀리게 되는데...",
+        "title":"급한 업무<br/>가 추가되어 예정된 할 일이 주르륵 밀리게 되는데...",
         "answerList": [
             {
                 "id": "a0",
@@ -22,7 +22,7 @@ export const CONTENTS = [
     },
     {
         "page": 1,
-        "title":"이직 제안을 받은 당신! 당신의 첫 질문은?",
+        "title":"이직 제<br/>안을 받은 당신! 당신의 첫 질문은?",
         "answerList": [
             {
                 "id": "b0",

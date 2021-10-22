@@ -97,7 +97,7 @@ export default function Research({ setState, setType }) {
         <div className={"research"}>
             <Progress rate={rate} prev={prev}/>
             <div style={{ height:"400px" }}>
-                <p className={"question"}>{question.title}</p>
+                <p dangerouslySetInnerHTML={{ __html: question.title}} className={"question"} />
                 <div>
                     {question.answerList.map(answer => <Answer key={answer.id} text={answer.title} handler={() => selectAnswer(answer.value)}/>)}
                 </div>

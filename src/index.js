@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+require('dotenv').config();
+
 /*
 * index.js : src 폴더에 포함되어 있다. 메인 프로그램이라고 할 수 있다. 여기서 HTML 템플릿 및 js컴포넌트 조합ㅎㅏ여 렌더링
 * App.js : src 폴더에 포함되어 있고, 컴포넌트를 정의하는 프로그램이다.

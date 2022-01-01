@@ -28,7 +28,7 @@ const Home = ({ setState }) => {
         </div>
         <Button text="START" handler={onStartClick} />
         <Layout />
-        <p className="text--smaller text--grey">Designed by ohmjeemin🧡uhjee</p>
+        <p className="creator text--smaller text--grey">Designed by ohmjeemin 🧡 uhjee</p>
       </div>
     </>
   );

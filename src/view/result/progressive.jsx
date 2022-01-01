@@ -33,7 +33,7 @@ const Progressive = ({ setView }) => {
         <div className="waiting_img img_waiting__01"></div>
       )}
       <div className="text--grey"> 당신의 강아지가 달려오는 중입니다... </div>
-      <p className="text--smaller text--grey">Designed by ohmjeemin🧡uhjee</p>
+      <p className="creator text--smaller text--grey">Designed by ohmjeemin 🧡 uhjee</p>
     </>
   );
 };

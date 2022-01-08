@@ -11,7 +11,7 @@ const Confirm = ({ setView }) => {
 
   return (
     <>
-      <h3> 테스트 완료!</h3>
+      <h3> 어떤 강아지가 찾아왔을까요? 🐶</h3>
       <Button text="결과 확인하기" handler={moveDescView} />
     </>
   );

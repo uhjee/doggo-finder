@@ -18,7 +18,7 @@ const KakaoShareButton = () => {
         container: '#kakao-link-btn',
         objectType: 'feed',
         content: {
-          title: '스트리트 도고 파인더',
+          title: '도고 파인더',
           description:
             '내 성격과 가장 잘 맞는 강아지 종류는 뭘까? 나와 딱 맞는 강아지 찾기 테스트',
           imageUrl: 'https://cranky-mclean-5611df.netlify.app/logo528.png',
@@ -41,13 +41,19 @@ const KakaoShareButton = () => {
     }
   };
   return (
-    <div>
+    <>
       <div
         style={{
+          width: '20rem',
+          marginTop: '5px',
           display: 'flex',
+          justifyContent: 'center',
+          boxSizing: 'border-box',
           border: '1px solid #eaeaea',
           padding: '5px 8px',
-          borderRadius: '8px',
+          borderRadius: '10px',
+          color: '#7b6f66',
+          fontFamily: 'HSGaeulSenggak20',
           background: '#ffffff',
         }}
       >
@@ -59,7 +65,7 @@ const KakaoShareButton = () => {
             alignItems: 'center',
           }}
         >
-          친구들과 공유하기
+          Share with your friends
         </div>
         <div id="kakao-link-btn">
           <img
@@ -69,7 +75,7 @@ const KakaoShareButton = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default KakaoShareButton;

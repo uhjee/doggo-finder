@@ -1,15 +1,25 @@
-
 @font-face {
   font-family: 'ONE-Mobile-POP';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@import './variable.scss';
+
 .answer {
   border: 2px solid #7b6f66;
+  box-sizing: border-box;
   padding: 14px 8px;
   border-radius: 10px;
   margin-bottom: 10px;
   text-align: center;
   background-color: #ffffff;
+  font-size: 0.92rem;
+}
+
+.answer:hover {
+  // background-color: $sand-shell;
+  border: 2px solid $orange;
 }

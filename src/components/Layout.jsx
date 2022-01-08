@@ -12,8 +12,8 @@ export default function Layout() {
         }
     }, [])
     return (
-        <div>
+        <>
             <KakaoShareButton />
-        </div>
+        </>
     )
 }

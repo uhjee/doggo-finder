@@ -15,7 +15,7 @@ const KakaoShareButton = () => {
       }
       kakao.Link.createDefaultButton({
         // 해당 위치에 카카오링크 공유하기 버튼을 추가하고, 해당 버튼을 클릭했을 때 메세지 보내기를 요청
-        container: '#kakao-link-btn',
+        container: '#kakao-share-btn',
         objectType: 'feed',
         content: {
           title: '도고 파인더',
@@ -43,6 +43,7 @@ const KakaoShareButton = () => {
   return (
     <>
       <div
+        id="kakao-share-btn"
         style={{
           width: '20rem',
           marginTop: '5px',

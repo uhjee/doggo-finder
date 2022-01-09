@@ -19,7 +19,9 @@
   font-size: 0.92rem;
 }
 
-.answer:hover {
-  // background-color: $sand-shell;
-  border: 2px solid $orange;
+// 모바일에서 hover 효과가 적용되지 않도록 미디어 쿼리 사용
+@media (hover: hover) {
+  .answer:hover {
+    border: 2px solid $orange;
+  }
 }

@@ -4,6 +4,14 @@
   padding: 0 20px;
   width: 85%;
   max-width: 400px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  height: 450px;
 }
 .question {
   color: #333333;
@@ -18,11 +26,11 @@
   height: 14px;
   margin-bottom: 85px;
   /*background-color: #c5a784;*/
-  position:relative;
+  position: relative;
   background-position-x: -134px;
 }
 .progress.painted {
-  background-image: url("../assets/images/dust.png");
+  background-image: url('../assets/images/dust.png');
   height: 20px;
   background-size: 65px 65px;
   background-position-x: 30px;
@@ -30,49 +38,50 @@
 }
 .progress.painted .dirt {
   position: absolute;
-  background-image: url("../assets/images/progress_image.png");
+  background-image: url('../assets/images/progress_image.png');
   width: 65px;
   height: 65px;
   background-position-x: -134px;
-  margin:-35px 0 0 4px;
+  margin: -35px 0 0 4px;
 }
 .progress .dog {
   position: absolute;
-  background-image: url("../assets/images/progress_image.png");
+  background-image: url('../assets/images/progress_image.png');
   width: 65px;
   height: 65px;
   background-position-x: -134px;
-  margin:-35px 0 0 4px;
+  margin: -35px 0 0 4px;
 }
 .progress .dog2 {
   position: absolute;
-  background-image: url("../assets/images/progress_image.png");
+  background-image: url('../assets/images/progress_image.png');
   width: 65px;
   height: 65px;
   background-position-x: -200px;
-  margin:-35px 0 0 4px;
+  margin: -35px 0 0 4px;
 }
 .progress .goal {
   position: absolute;
   right: 0;
-  background-image: url("../assets/images/progress_image.png");
+  background-image: url('../assets/images/progress_image.png');
   width: 45px;
   height: 55px;
   background-position-x: -67px;
-  margin:-32px -18px 0 -16px;
+  margin: -32px -18px 0 -16px;
 }
 .progress .home {
   position: absolute;
   left: 0;
-  background-image: url("../assets/images/progress_image.png");
+  background-image: url('../assets/images/progress_image.png');
   width: 65px;
   height: 65px;
   z-index: 1;
-  margin:-40px 0 0 -14px;
+  margin: -40px 0 0 -14px;
 }
 @font-face {
   font-family: 'InfinitySans-CondBoldA1';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-CondBoldA1.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-CondBoldA1.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }

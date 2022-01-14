@@ -3,11 +3,11 @@ import React from 'react';
 import Button from 'components/Button';
 import successImage from 'assets/images/success_image.png';
 
-import { RESULT_VIEWTYPE } from 'constant/stringEnum';
+import { APP_STATE } from 'constant/stringEnum';
 
-const Confirm = ({ setView }) => {
+const Confirm = ({ setState }) => {
   const moveDescView = () => {
-    setView(RESULT_VIEWTYPE.DESCRIPTION);
+    setState(APP_STATE.DESC);
   };
 
   return (

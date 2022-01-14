@@ -1,5 +1,7 @@
 import './App.scss';
 import React, { useState } from 'react'; // npm install react-router-dom 로 설치
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import { APP_STATE } from 'constant/stringEnum';
 
 import Home from 'view/Home';
@@ -11,18 +13,45 @@ function App() {
   const [state, setState] = useState(APP_STATE.HOME);
   const [type, setType] = useState('');
   return (
-    <>
-      <div
-        className={`main-container${state === APP_STATE.DESC ? ' olive' : ''}`}
-      >
-        {state === APP_STATE.HOME && <Home setState={setState} />}
-        {state === APP_STATE.RESEARCH && (
-          <Research setState={setState} setType={setType} />
-        )}
-        {state === APP_STATE.RESULT && <Result setState={setState} />}
-        {state === APP_STATE.DESC && <Description type={type} />}
-      </div>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <div
+          className={`main-container${
+            state === APP_STATE.DESC ? ' olive' : ''
+          }`}
+        >
+          <Route
+            exact
+            path="/"
+            render={({ history }) => (
+              <Home history={history} setState={setState} />
+            )}
+          />
+          <Route
+            exact
+            path="/research"
+            render={({ history }) => (
+              <Research
+                history={history}
+                setState={setState}
+                setType={setType}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/result"
+            render={({ history }) => (
+              <Result history={history} setState={setState} />
+            )}
+          />
+          <Route
+            path="/desc"
+            render={({ history }) => <Description type={type} />}
+          />
+        </div>
+      </Switch>
+    </BrowserRouter>
   );
 }
 export default App;

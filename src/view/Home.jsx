@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import React from 'react';
 import Button from 'components/Button';
 import Layout from 'components/Layout';
@@ -6,9 +8,10 @@ import '../scss/home.scss';
 
 import { APP_STATE } from 'constant/stringEnum.js';
 
-const Home = ({ setState }) => {
+const Home = ({ setState, history }) => {
   const onStartClick = () => {
     setState(APP_STATE.RESEARCH);
+    history.push('/research');
   };
 
   return (
@@ -26,6 +29,7 @@ const Home = ({ setState }) => {
           <h2>doggo Finder</h2>
         </div>
         <Button text="START" handler={onStartClick} color="rockBrown" />
+
         <Layout />
         <p className="creator text--smaller text--grey">
           Designed by ohmjeemin 🧡 uhjee

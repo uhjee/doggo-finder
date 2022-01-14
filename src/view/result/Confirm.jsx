@@ -4,17 +4,14 @@ import Button from 'components/Button';
 
 import { APP_STATE } from 'constant/stringEnum';
 
-const Confirm = ({ setState }) => {
+const Confirm = ({ setState, history }) => {
   const moveDescView = () => {
     setState(APP_STATE.DESC);
+    history.push('/desc')
   };
 
   return (
     <>
-      {/* <div
-        className="img_success"
-        style={{ backgroundImage: `url(${successImage})` }}
-      ></div> */}
       <img
         className="img_success"
         src="img/success_img.png"

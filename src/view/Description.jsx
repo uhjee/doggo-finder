@@ -7,14 +7,7 @@ import { isNil } from 'utils/commonUtil';
 
 import '../scss/description.scss';
 
-const Description = ({ type }) => {
-  // const initialDescInfo = {
-  //   title: '',
-  //   subTitle: '',
-  //   image: '',
-  //   descText: '',
-  // };
-
+const Description = ({ type, history }) => {
   const [descInfo, setDescInfo] = useState({});
 
   useEffect(() => {

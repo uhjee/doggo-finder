@@ -1,0 +1,46 @@
+@import './variable.scss';
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+
+  .desc-title {
+    margin-bottom: 150px;
+  }
+
+  .desc-box {
+    width: 335px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    border-radius: 6px;
+
+    background-color: #fff;
+    font-size: 0.9rem;
+
+    .desc-box__img {
+      width: 230px;
+      height: 230px;
+      // background-size: contain;
+
+      position: absolute;
+      top: -9rem;
+    }
+
+    .desc-box__text {
+      padding: 5.8rem 20px 20px 20px;
+
+      .desc-box_subtitle {
+        text-align: center;
+        color: $brown;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { RESULT_DESC_INFO } from 'constant/description';
 
 import { isNil } from 'utils/commonUtil';
 
-const path = 'img/dog_king_charles.png';
+import '../scss/description.scss';
 
 const Description = ({ type }) => {
   // const initialDescInfo = {
@@ -34,18 +34,12 @@ const Description = ({ type }) => {
         <div className="desc-box">
           <img
             className="desc-box__img"
-            src={path}
-            alt="img/dog_dog_king_charles.png"
+            src={descInfo.imagePath}
+            alt={descInfo.title}
           />
-          {/* <div
-            className="desc-box__img"
-            style={{
-              backgroundImage: `url(${descInfo.image})`,
-            }}
-          ></div> */}
           <div className="desc-box__text">
-            <h3 className="desc-box_subtitle"
-              // className="text--white"
+            <h3
+              className="desc-box_subtitle"
               // ! dangerouslySetInnerHTML :: react 내에서 innerHTML 사용하는 방법(XSS 방지 목적)
               dangerouslySetInnerHTML={{ __html: descInfo.subTitle }}
             ></h3>

@@ -2,10 +2,10 @@ export const APP_STATE = {
   HOME: 'HOME',
   RESEARCH: 'RESEARCH',
   RESULT: 'RESULT',
+  DESC: 'DESCRIPTION',
 };
 
 export const RESULT_VIEWTYPE = {
   PROGRESSIVE_BAR: 0,
   CONFIRM: 1,
-  DESCRIPTION: 2,
 };

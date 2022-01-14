@@ -4,11 +4,10 @@ import { useState } from 'react';
 import { isNil } from 'utils/commonUtil';
 import { RESULT_VIEWTYPE } from 'constant/stringEnum';
 
-import Progressive from 'view/result/progressive';
-import Confirm from 'view/result/confirm';
-import Description from 'view/result/description';
+import Progressive from 'view/result/Progressive';
+import Confirm from 'view/result/Confirm';
 
-const Result = ({ type }) => {
+const Result = ({ setState }) => {
   const [view, setView] = useState(RESULT_VIEWTYPE.PROGRESSIVE_BAR);
   return (
     <>
@@ -18,8 +17,7 @@ const Result = ({ type }) => {
         }`}
       >
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}
-        {!isNil(view) && view === 1 && <Confirm setView={setView} />}
-        {!isNil(view) && view === 2 && <Description type={type} />}
+        {!isNil(view) && view === 1 && <Confirm setState={setState} />}
       </div>
     </>
   );

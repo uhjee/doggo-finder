@@ -8,8 +8,7 @@ import { APP_STATE } from 'constant/stringEnum.js';
 
 const Home = ({ setState }) => {
   const onStartClick = () => {
-     setState(APP_STATE.RESEARCH);
-    //setState(APP_STATE.RESULT); // TODO:uhjee Test용
+    setState(APP_STATE.RESEARCH);
   };
 
   return (
@@ -26,9 +25,11 @@ const Home = ({ setState }) => {
           </div>
           <h2>doggo Finder</h2>
         </div>
-        <Button text="START" handler={onStartClick} />
+        <Button text="START" handler={onStartClick} color="rockBrown" />
         <Layout />
-        <p className="creator text--smaller text--grey">Designed by ohmjeemin 🧡 uhjee</p>
+        <p className="creator text--smaller text--grey">
+          Designed by ohmjeemin 🧡 uhjee
+        </p>
       </div>
     </>
   );

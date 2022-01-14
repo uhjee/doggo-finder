@@ -10,8 +10,12 @@
   height: 100vh;
   position: relative;
   background-color: #f1f1e5;
+  overflow-y: scroll;
   .main-container__inner {
     width: 29.2rem;
+  }
+  &.olive {
+    background-color: #567149;
   }
 }
 

@@ -1,17 +1,18 @@
 @import './variable.scss';
 
 .result-container {
-
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: center;
 
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
 
-  &.olive {
-    background-color: #567149;
-  }
   .waiting_img {
     width: 200px;
     height: 200px;
@@ -31,50 +32,5 @@
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
-  }
-
-  .desc-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-
-    .desc-title {
-      margin-bottom: 150px;
-    }
-
-    .desc-box {
-      width: 335px;
-      margin-bottom: 20px;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      position: relative;
-      border-radius: 6px;
-
-      background-color: #fff;
-      font-size: 0.9rem;
-
-      .desc-box__img {
-        width: 230px;
-        height: 230px;
-        // background-size: contain;
-
-        position: absolute;
-        top: -9rem;
-      }
-
-      .desc-box__text {
-        padding: 5.8rem 20px 20px 20px;
-
-        .desc-box_subtitle {
-          text-align: center;
-          color: $brown;
-          margin-bottom: 24px;
-        }
-      }
-    }
   }
 }

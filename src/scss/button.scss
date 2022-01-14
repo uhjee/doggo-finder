@@ -10,7 +10,7 @@
   // border: 2px solid $light-grey;
   border-radius: 10px;
   outline: none;
-  background-color: $sand-shell;
+  background-color: $brown;
   color: #fff;
   font-family: 'HSGaeulSenggak20';
   font-weight: 500;
@@ -19,4 +19,14 @@
   margin: 10px 15px;
 
   cursor: pointer;
+
+  &.sandShell {
+    background-color: $sand-shell;
+  }
+  &.rockBrown {
+    background-color: $rock-brown;
+  }
+  &.brown {
+    background-color: $brown;
+  }
 }

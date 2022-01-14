@@ -13,17 +13,14 @@
   bottom: 0;
   margin: auto auto;
 
-  .waiting_img {
+  img.waiting_img {
     width: 200px;
     height: 200px;
 
     font-size: 0.9rem;
-    background-image: url(../assets/images/waiting_image.png);
 
-    &.img_waiting__00 {
-    }
-    &.img_waiting__01 {
-      background-position: -200px;
+    &.reverse {
+      transform: scaleX(-1);
     }
   }
 

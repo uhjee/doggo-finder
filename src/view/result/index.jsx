@@ -7,7 +7,7 @@ import { RESULT_VIEWTYPE } from 'constant/stringEnum';
 import Progressive from 'view/result/Progressive';
 import Confirm from 'view/result/Confirm';
 
-const Result = ({ setState }) => {
+const Result = ({ setState, history }) => {
   const [view, setView] = useState(RESULT_VIEWTYPE.PROGRESSIVE_BAR);
   return (
     <>
@@ -17,7 +17,9 @@ const Result = ({ setState }) => {
         }`}
       >
         {!isNil(view) && view === 0 && <Progressive setView={setView} />}
-        {!isNil(view) && view === 1 && <Confirm setState={setState} />}
+        {!isNil(view) && view === 1 && (
+          <Confirm setState={setState} history={history} />
+        )}
       </div>
     </>
   );

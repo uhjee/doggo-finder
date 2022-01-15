@@ -15,41 +15,43 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <div
-          className={`main-container${
-            state === APP_STATE.DESC ? ' olive' : ''
-          }`}
-        >
-          <Route
-            exact
-            path="/"
-            render={({ history }) => (
-              <Home history={history} setState={setState} />
-            )}
-          />
-          <Route
-            exact
-            path="/research"
-            render={({ history }) => (
-              <Research
-                history={history}
-                setState={setState}
-                setType={setType}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/result"
-            render={({ history }) => (
-              <Result history={history} setState={setState} />
-            )}
-          />
-          <Route
-            path="/desc"
-            render={({ history }) => <Description type={type} />}
-          />
-        </div>
+        <>
+          <div
+            className={`main-container${
+              state === APP_STATE.DESC ? ' olive' : ''
+            }`}
+          >
+            <Route
+              exact
+              path="/"
+              render={({ history }) => (
+                <Home history={history} setState={setState} />
+              )}
+            />
+            <Route
+              exact
+              path="/research"
+              render={({ history }) => (
+                <Research
+                  history={history}
+                  setState={setState}
+                  setType={setType}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/result"
+              render={({ history }) => (
+                <Result history={history} setState={setState} />
+              )}
+            />
+            <Route
+              path="/desc"
+              render={({ history }) => <Description type={type} />}
+            />
+          </div>
+        </>
       </Switch>
     </BrowserRouter>
   );

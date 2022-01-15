@@ -29,8 +29,7 @@ function App() {
               )}
             />
             <Route
-              exact
-              path="/research"
+              path="/research/:pageNum"
               render={({ history }) => (
                 <Research
                   history={history}
@@ -42,8 +41,8 @@ function App() {
             <Route
               exact
               path="/result"
-              render={({ history }) => (
-                <Result history={history} setState={setState} />
+              render={({ history, match }) => (
+                <Result history={history} match={match} setState={setState} />
               )}
             />
             <Route

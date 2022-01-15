@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import React from 'react';
 import Button from 'components/Button';
 import Layout from 'components/Layout';
@@ -11,7 +9,7 @@ import { APP_STATE } from 'constant/stringEnum.js';
 const Home = ({ setState, history }) => {
   const onStartClick = () => {
     setState(APP_STATE.RESEARCH);
-    history.push('/research');
+    history.push('/research/0');
   };
 
   return (

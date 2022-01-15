@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import Answer from 'components/Answer';
 import Progress from 'components/Progress';
 
@@ -9,6 +11,10 @@ import { APP_STATE } from 'constant/stringEnum.js';
 
 export default function Research({ setState, setType, history }) {
   const [page, setPage] = useState(0);
+
+  const { pageNum } = useParams();
+  console.log({ pageNum });
+
   const [point, setPoint] = useState({
     I: 0,
     E: 0,
@@ -37,6 +43,7 @@ export default function Research({ setState, setType, history }) {
       history.push('/result');
     } else {
       setPage(page + 1);
+      history.push(`/research/${page}`);
     }
   };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { RESULT_DESC_INFO } from 'constant/description';
 
@@ -23,6 +24,7 @@ const Description = ({ type, history }) => {
   return (
     <>
       <div className="desc-container">
+        <Link to="/">홈</Link>
         <h1 className="desc-title text--white">{descInfo.title}</h1>
         <div className="desc-box">
           <img

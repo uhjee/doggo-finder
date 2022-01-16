@@ -1,30 +1,42 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import { RESULT_DESC_INFO } from 'constant/description';
-
-import { isNil } from 'utils/commonUtil';
 
 import '../scss/description.scss';
 
-const Description = ({ type, history }) => {
+import { RESULT_DESC_INFO } from 'constant/description';
+import { APP_STATE } from 'constant/stringEnum.js';
+import Button from 'components/Button';
+
+import { isNil } from 'utils/commonUtil';
+
+const Description = ({ type, setState, history }) => {
   const [descInfo, setDescInfo] = useState({});
 
+  /**
+   * type이 변경되면, descInfo를 세팅한다.
+   * @author uhjee
+   */
   useEffect(() => {
     if (!isNil(type)) {
-      // setDescInfo(() => ({ ...RESULT_DESC_INFO[type] }));
-      setDescInfo(() => ({ ...RESULT_DESC_INFO['ISTJ'] }));
+      setDescInfo(() => ({ ...RESULT_DESC_INFO[type] }));
     }
     return () => {
       setDescInfo({});
     };
   }, [type]);
 
+  /**
+   * Home 화면으로 라우팅한다.
+   * @author  uhjee
+   */
+  const goHome = () => {
+    setState(APP_STATE.HOME);
+    history.push('/');
+  };
+
   return (
     <>
       <div className="desc-container">
-        <Link to="/">홈</Link>
         <h1 className="desc-title text--white">{descInfo.title}</h1>
         <div className="desc-box">
           <img
@@ -41,6 +53,7 @@ const Description = ({ type, history }) => {
             <p dangerouslySetInnerHTML={{ __html: descInfo.descText }}></p>
           </div>
         </div>
+        <Button text="첫 화면으로" handler={goHome} />
       </div>
     </>
   );

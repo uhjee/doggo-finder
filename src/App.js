@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useState } from 'react'; // npm install react-router-dom 로 설치
+import React, { useState, useEffect } from 'react'; // npm install react-router-dom 로 설치
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { APP_STATE } from 'constant/stringEnum';
@@ -12,6 +12,15 @@ import Description from 'view/Description';
 function App() {
   const [state, setState] = useState(APP_STATE.HOME);
   const [type, setType] = useState('');
+
+  /**
+   * state가 HOME 일 경우, type 을 초기화한다.
+   * @author  uhjee
+   */
+  useEffect(() => {
+    if (state && state === APP_STATE.HOME) setType('');
+  }, [state]);
+
   return (
     <BrowserRouter>
       <Switch>
@@ -47,7 +56,14 @@ function App() {
             />
             <Route
               path="/desc"
-              render={({ history }) => <Description type={type} />}
+              render={({ history }) => (
+                <Description
+                  type={type}
+                  history={history}
+                  setState={setState}
+                />
+              )}
+              // render={() => <Description type={type} />}
             />
           </div>
         </>

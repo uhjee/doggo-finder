@@ -2,12 +2,12 @@ import React from 'react';
 
 import Button from 'components/Button';
 
-import { APP_STATE } from 'constant/stringEnum';
-
-const Confirm = ({ setState, history }) => {
+const Confirm = ({ type, setState, history }) => {
   const moveDescView = () => {
-    setState(APP_STATE.DESC);
-    history.push('/desc')
+    if (type) {
+      const lowerType = type.toLowerCase();
+      history.push(`/desc/${lowerType}`);
+    }
   };
 
   return (

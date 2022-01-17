@@ -6,9 +6,10 @@ import '../scss/home.scss';
 
 import { APP_STATE } from 'constant/stringEnum.js';
 
-const Home = ({ setState, history }) => {
+const Home = ({ history, setState }) => {
+  setState(APP_STATE.HOME);
+
   const onStartClick = () => {
-    setState(APP_STATE.RESEARCH);
     history.push('/research/0');
   };
 

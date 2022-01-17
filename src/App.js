@@ -51,11 +51,16 @@ function App() {
               exact
               path="/result"
               render={({ history, match }) => (
-                <Result history={history} match={match} setState={setState} />
+                <Result
+                  history={history}
+                  match={match}
+                  setState={setState}
+                  type={type}
+                />
               )}
             />
             <Route
-              path="/desc"
+              path="/desc/:dogType"
               render={({ history }) => (
                 <Description
                   type={type}
@@ -63,7 +68,6 @@ function App() {
                   setState={setState}
                 />
               )}
-              // render={() => <Description type={type} />}
             />
           </div>
         </>

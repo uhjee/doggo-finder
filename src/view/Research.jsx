@@ -6,10 +6,13 @@ import Progress from 'components/Progress';
 
 import '../scss/research.scss';
 
+import { TYPE_DOG_MAP } from 'constant/description.js';
 import { CONTENTS } from 'constant/question.js';
 import { APP_STATE } from 'constant/stringEnum.js';
 
 export default function Research({ setState, setType, history }) {
+  setState(APP_STATE.RESEARCH);
+
   const [page, setPage] = useState(0);
   const [question, setQuestion] = useState({});
 
@@ -55,7 +58,9 @@ export default function Research({ setState, setType, history }) {
     updateRate();
     if (page === CONTENTS.length - 1) {
       setState(APP_STATE.RESULT);
-      getType();
+      const mbti = getMbti();
+      const _type = getType(mbti);
+      setType(_type);
       history.push('/result');
     } else {
       history.push(`/research/${page + 1}`);
@@ -66,6 +71,7 @@ export default function Research({ setState, setType, history }) {
    * 선택한 응답에 대한 타입에 점수를 더한다
    * @author ohmjeemin
    * @param type [String] type
+   * @returns resultType  [string]  research 질문들의 결과에 해당하는 type을 반환한다.
    */
   const addPoint = useCallback(type => {
     point[type] += 5;
@@ -73,10 +79,10 @@ export default function Research({ setState, setType, history }) {
   });
 
   /**
-   * 점수를 통해 type을 얻는다
+   * 질문을 통해 쌓인 point를 통해 mbti을 얻는다
    * @author ohmjeemin
    */
-  const getType = useCallback(() => {
+  const getMbti = useCallback(() => {
     const pointValueList = Object.values(point);
     const selectedTypeIndexList = [];
     let arr = [];
@@ -103,7 +109,18 @@ export default function Research({ setState, setType, history }) {
       resultType += pointKeyList[li];
     });
 
-    setType(resultType);
+    return resultType;
+  });
+
+  /**
+   * mbti를 dog_type(type) 으로 반환한다.
+   * @author  uhjee
+   * @param   TYPE_DOG_MAP  [string]
+   * @returns [string]
+   */
+  const getType = useCallback(mbti => {
+    if (!mbti) return;
+    return TYPE_DOG_MAP[mbti];
   });
 
   /**

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import '../scss/description.scss';
 
@@ -9,28 +10,33 @@ import Button from 'components/Button';
 
 import { isNil } from 'utils/commonUtil';
 
+// import path from 'img/dogs/dog_bedlington.png';
+
 const Description = ({ type, setState, history }) => {
+  const { dogType } = useParams();
+
   const [descInfo, setDescInfo] = useState({});
 
+  setState(APP_STATE.DESC);
+
   /**
-   * type이 변경되면, descInfo를 세팅한다.
+   * match.params 의 dogType이 변경되면, descInfo를 세팅한다.
    * @author uhjee
    */
   useEffect(() => {
-    if (!isNil(type)) {
-      setDescInfo(() => ({ ...RESULT_DESC_INFO[type] }));
+    if (!isNil(dogType)) {
+      setDescInfo(() => ({ ...RESULT_DESC_INFO[dogType] }));
     }
     return () => {
       setDescInfo({});
     };
-  }, [type]);
+  }, [dogType]);
 
   /**
    * Home 화면으로 라우팅한다.
    * @author  uhjee
    */
   const goHome = () => {
-    setState(APP_STATE.HOME);
     history.push('/');
   };
 

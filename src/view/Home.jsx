@@ -5,9 +5,11 @@ import Layout from 'components/Layout';
 import '../scss/home.scss';
 
 import { APP_STATE } from 'constant/stringEnum.js';
+import { useMainState } from 'common/customHooks.js';
 
-const Home = ({ history, setState }) => {
-  setState(APP_STATE.HOME);
+const Home = ({ history, setMainState }) => {
+  // one of customHook
+  useMainState(APP_STATE.HOME, setMainState);
 
   const onStartClick = () => {
     history.push('/research/0');

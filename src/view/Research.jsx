@@ -10,8 +10,10 @@ import { TYPE_DOG_MAP } from 'constant/description.js';
 import { CONTENTS } from 'constant/question.js';
 import { APP_STATE } from 'constant/stringEnum.js';
 
-export default function Research({ setState, setType, history }) {
-  setState(APP_STATE.RESEARCH);
+import { useMainState } from 'common/customHooks.js';
+
+export default function Research({ setMainState, setType, history }) {
+  useMainState(APP_STATE.RESEARCH, setMainState);
 
   const [page, setPage] = useState(0);
   const [question, setQuestion] = useState({});
@@ -57,7 +59,6 @@ export default function Research({ setState, setType, history }) {
     addPoint(type);
     updateRate();
     if (page === CONTENTS.length - 1) {
-      setState(APP_STATE.RESULT);
       const mbti = getMbti();
       const _type = getType(mbti);
       setType(_type);

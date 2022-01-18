@@ -2,6 +2,12 @@ import { useEffect, useRef } from 'react';
 
 import { isNil } from 'utils/commonUtil';
 
+/**
+ * 클릭 이벤트 핸들러 함수를 인자로 받아, 해당 핸들러를 매핑할 ref element를 반환한다.
+ * @author  uhjee
+ * @param {[string]} onClick  클릭 이벤트 핸들러
+ * @returns   {[object]}      클릭 이벤트 등록 객체
+ */
 export const useClick = onClick => {
   if (typeof onClick !== 'function') {
     throw new Error('click 이벤트 콜백함수  - 함수가 아님');
@@ -10,18 +16,27 @@ export const useClick = onClick => {
   const element = useRef();
 
   useEffect(() => {
-    if (element && element.current) {
-      element.current.addEventListener('click', onClick);
+    const _current = element.current;
+    if (element && _current) {
+      _current.addEventListener('click', onClick);
     }
     return () => {
-      if (element && element.current) {
-        element.current.removeEventListener('click', onClick);
+      if (element && _current) {
+        _current.removeEventListener('click', onClick);
       }
     };
-  }, []);
+  });
   return element;
 };
 
+/**
+ * 파라미터로 받는 cb 함수가 delay 이후에 호출되도록 처리한다.
+ * @author  uhjee
+ * @param   {[function]}  callback  지연 콜백
+ * @param   {[number]}  delay     지연할 밀리초
+ *
+ * @return  {[function]}            interval을 종료할 수 있는 함수
+ */
 export const useInterval = (callback, delay) => {
   // useRef를 사용해 가장 마지막 콜백 기억
   const savedCallback = useRef();
@@ -42,4 +57,16 @@ export const useInterval = (callback, delay) => {
       return () => clearInterval(id);
     }
   });
+};
+
+/**
+ * 상태를 변경한다.
+ * @author  uhjee
+ * @param   {[string]}  state     (HOME, RESEARCH, RESULT, DESCRIPTION)
+ * @param   {[function]}  setState  [setState description]
+ */
+export const useMainState = (state, setState) => {
+  useEffect(() => {
+    setState(state);
+  }, [state, setState]);
 };

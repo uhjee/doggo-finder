@@ -10,7 +10,7 @@ import Result from 'view/result';
 import Description from 'view/Description';
 
 function App() {
-  const [state, setState] = useState(APP_STATE.HOME);
+  const [mainState, setMainState] = useState(APP_STATE.HOME);
   const [type, setType] = useState('');
 
   /**
@@ -18,8 +18,8 @@ function App() {
    * @author  uhjee
    */
   useEffect(() => {
-    if (state && state === APP_STATE.HOME) setType('');
-  }, [state]);
+    if (mainState && mainState === APP_STATE.HOME) setType('');
+  }, [mainState]);
 
   return (
     <BrowserRouter>
@@ -27,14 +27,14 @@ function App() {
         <>
           <div
             className={`main-container${
-              state === APP_STATE.DESC ? ' olive' : ''
+              mainState === APP_STATE.DESC ? ' olive' : ''
             }`}
           >
             <Route
               exact
               path="/"
               render={({ history }) => (
-                <Home history={history} setState={setState} />
+                <Home history={history} setMainState={setMainState} />
               )}
             />
             <Route
@@ -42,7 +42,7 @@ function App() {
               render={({ history }) => (
                 <Research
                   history={history}
-                  setState={setState}
+                  setMainState={setMainState}
                   setType={setType}
                 />
               )}
@@ -54,7 +54,7 @@ function App() {
                 <Result
                   history={history}
                   match={match}
-                  setState={setState}
+                  setMainState={setMainState}
                   type={type}
                 />
               )}
@@ -65,7 +65,7 @@ function App() {
                 <Description
                   type={type}
                   history={history}
-                  setState={setState}
+                  setMainState={setMainState}
                 />
               )}
             />

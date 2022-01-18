@@ -22,7 +22,7 @@ const Progressive = ({ setView }) => {
     setTimeout(() => {
       setView(RESULT_VIEWTYPE.CONFIRM);
     }, 2500);
-  }, []);
+  });
 
   return (
     <>

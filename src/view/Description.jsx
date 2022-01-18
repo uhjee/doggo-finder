@@ -9,15 +9,14 @@ import { APP_STATE } from 'constant/stringEnum.js';
 import Button from 'components/Button';
 
 import { isNil } from 'utils/commonUtil';
+import { useMainState } from 'common/customHooks.js';
 
-// import path from 'img/dogs/dog_bedlington.png';
+const Description = ({ setMainState, history }) => {
+  useMainState(APP_STATE.DESC, setMainState);
 
-const Description = ({ type, setState, history }) => {
   const { dogType } = useParams();
 
   const [descInfo, setDescInfo] = useState({});
-
-  setState(APP_STATE.DESC);
 
   /**
    * match.params 의 dogType이 변경되면, descInfo를 세팅한다.
@@ -25,7 +24,8 @@ const Description = ({ type, setState, history }) => {
    */
   useEffect(() => {
     if (!isNil(dogType)) {
-      setDescInfo(() => ({ ...RESULT_DESC_INFO[dogType] }));
+      const upperDogType = dogType.toUpperCase();
+      setDescInfo({ ...RESULT_DESC_INFO[upperDogType] });
     }
     return () => {
       setDescInfo({});

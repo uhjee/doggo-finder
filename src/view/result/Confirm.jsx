@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from 'components/Button';
 
-const Confirm = ({ type, setState, history }) => {
+const Confirm = ({ type, history }) => {
   const moveDescView = () => {
     if (type) {
       const lowerType = type.toLowerCase();

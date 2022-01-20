@@ -7,11 +7,12 @@ import '../scss/home.scss';
 import { APP_STATE } from 'constant/stringEnum.js';
 import { useMainState } from 'common/customHooks.js';
 
-const Home = ({ history, setMainState }) => {
+const Home = ({ history, setMainState, setIsActive }) => {
   // one of customHook
   useMainState(APP_STATE.HOME, setMainState);
 
   const onStartClick = () => {
+    setIsActive(true);
     history.push('/research/0');
   };
 

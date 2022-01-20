@@ -2,15 +2,13 @@ import React from 'react';
 import { useClick } from '../common/customHooks';
 import '../scss/button.scss';
 
-const Button = ({ text, handler, color = 'sandShell' }) => {
+const Button = ({ className = '', text, handler, color = 'sandShell' }) => {
   const button = useClick(handler);
 
   return (
-    <>
-      <div className={`button ${color}`} ref={button}>
-        {text}
-      </div>
-    </>
+    <span className={`button ${color} ${className}`} ref={button}>
+      {text}
+    </span>
   );
 };
 

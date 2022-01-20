@@ -9,6 +9,7 @@ import Home from 'view/Home';
 import Research from 'view/Research';
 import Result from 'view/result';
 import Description from 'view/Description';
+import NotFound from 'view/NotFound';
 
 function App() {
   const [mainState, setMainState] = useState(APP_STATE.HOME);
@@ -70,6 +71,7 @@ function App() {
               />
             )}
           />
+          <Route path="*" component={NotFound} />
         </Switch>
       </BrowserRouter>
     </div>

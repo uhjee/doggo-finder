@@ -2,18 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'
+import { reducer } from './reducers'
+import { createStore } from "redux"
+import { Provider } from 'react-redux' //하위 컴포넌트에게 store를 전달
+
 
 require('dotenv').config();
 
 /*
-* index.js : src 폴더에 포함되어 있다. 메인 프로그램이라고 할 수 있다. 여기서 HTML 템플릿 및 js컴포넌트 조합ㅎㅏ여 렌더링
+* index.js : src 폴더에 포함되어 있다. 최상위 컴포넌트인 <App />을 DOM에 렌더링하는 index.js에서 작업을 진행.
 * App.js : src 폴더에 포함되어 있고, 컴포넌트를 정의하는 프로그램이다.
 * index.html : public 폴더에 있고 메인 프로그램인 index.js에 대응되는 것으로 HTML 템플릿 파일이다.y
 * */
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+        <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

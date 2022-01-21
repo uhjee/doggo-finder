@@ -10,11 +10,29 @@ import Research from 'view/Research';
 import Result from 'view/result';
 import Description from 'view/Description';
 import NotFound from 'view/NotFound';
+//import store from './store'
+
+//import {useSelector} from "react-redux";
+//import {next} from "actions"; //액션 크리에이터 임포트
+
+// console.log(store.getState(next()));
+//
+// // 상태가 바뀔때마다 기록합니다.
+// let unsubscribe = store.subscribe(() =>
+//     console.log(store.getState())
+// );
+//
+// // 액션들을 보냅니다.
+// store.dispatch();
+//
+// // 상태 변경을 더 이상 받아보지 않습니다.
+// unsubscribe();
 
 function App() {
   const [mainState, setMainState] = useState(APP_STATE.HOME);
   const [type, setType] = useState('');
   const [isActive, setIsActive] = useState(false);
+
 
   /**
    * state가 HOME 일 경우, type 을 초기화한다.

@@ -31,7 +31,6 @@ const Home = ({ history, setMainState, setIsActive }) => {
           <h2>doggo Finder</h2>
         </div>
         <Button text="START" handler={onStartClick} color="rockBrown" />
-
         <Layout />
         <p className="creator text--smaller text--grey">
           Designed by ohmjeemin 🧡 uhjee

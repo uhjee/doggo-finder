@@ -6,9 +6,8 @@ import 'scss/notFound.scss';
 
 const NotFound = () => {
   const history = useHistory();
-  const goHome = () => {
-    history.push('/');
-  };
+  const goHome = () => history.push('/');
+
   return (
     <div className="notfound-container">
       <img

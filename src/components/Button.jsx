@@ -3,10 +3,10 @@ import { useClick } from '../common/customHooks';
 import '../scss/button.scss';
 
 const Button = ({ className = '', text, handler, color = 'sandShell' }) => {
-  const button = useClick(handler);
+  const buttonEl = useClick(handler);
 
   return (
-    <span className={`button ${color} ${className}`} ref={button}>
+    <span className={`button ${color} ${className}`} ref={buttonEl}>
       {text}
     </span>
   );

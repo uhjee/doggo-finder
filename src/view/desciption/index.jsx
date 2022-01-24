@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import '../scss/description.scss';
+import '../../scss/description.scss';
 
 import { RESULT_DESC_INFO } from 'constant/description';
 import { APP_STATE } from 'constant/stringEnum.js';

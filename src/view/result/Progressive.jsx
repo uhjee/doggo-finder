@@ -26,7 +26,6 @@ const Progressive = ({ setView }) => {
 
   return (
     <>
-      {/* {!isNil(imageNum) && imageNum === 0 && ( */}
       <img
         className={`waiting_img ${
           !isNil(imageNum) && imageNum === 0 ? '' : 'reverse'
@@ -34,18 +33,7 @@ const Progressive = ({ setView }) => {
         src="img/waiting_img.png"
         alt="waiting_img"
       />
-      {/* )}
-      {!isNil(imageNum) && imageNum === 1 && (
-        <img
-          className="waiting_img reverse"
-          src="img/waiting_img.png"
-          alt="waiting_img"
-        />
-      )} */}
       <div className="text--grey"> 당신의 강아지가 달려오는 중입니다... </div>
-      <p className="creator text--smaller text--grey">
-        Designed by ohmjeemin 🧡 uhjee
-      </p>
     </>
   );
 };

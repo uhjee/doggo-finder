@@ -1,0 +1,23 @@
+.footer {
+  position: absolute;
+  bottom: 22px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .creator {
+    position: absolute;
+    bottom: 16px;
+    letter-spacing: 1px;
+
+    .creator__link {
+      font-weight: 600;
+      font-size: 0.70rem;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: #888;
+      }
+    }
+  }
+}

@@ -8,8 +8,9 @@ import GuardRoute from './router/GuardRoute';
 import Home from 'view/Home';
 import Research from 'view/Research';
 import Result from 'view/result';
-import Description from 'view/Description';
+import Description from 'view/desciption';
 import NotFound from 'view/NotFound';
+import Footer from 'components/Footer';
 //import store from './store'
 
 //import {useSelector} from "react-redux";
@@ -32,7 +33,6 @@ function App() {
   const [mainState, setMainState] = useState(APP_STATE.HOME);
   const [type, setType] = useState('');
   const [isActive, setIsActive] = useState(false);
-
 
   /**
    * state가 HOME 일 경우, type 을 초기화한다.
@@ -91,6 +91,7 @@ function App() {
           />
           <Route path="*" component={NotFound} />
         </Switch>
+        {mainState && mainState !== APP_STATE.DESC && <Footer />}
       </BrowserRouter>
     </div>
   );

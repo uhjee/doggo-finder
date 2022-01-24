@@ -32,9 +32,6 @@ const Home = ({ history, setMainState, setIsActive }) => {
         </div>
         <Button text="START" handler={onStartClick} color="rockBrown" />
         <Layout />
-        <p className="creator text--smaller text--grey">
-          Designed by ohmjeemin 🧡 uhjee
-        </p>
       </div>
     </>
   );

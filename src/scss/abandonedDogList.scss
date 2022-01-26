@@ -1,0 +1,70 @@
+@import './variable.scss';
+
+.abandoned-list-box {
+  width: 335px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+  border-radius: 6px;
+  
+  background-color: #fff;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  // margin-bottom: 12px;
+
+  .abandoned-item-box {
+    // border: 1px solid salmon;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfd9d9;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-bottom: 8px;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    img.abandoned-item__img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .abandoned-item__desc {
+      flex-grow: 1;
+      font-size: 0.82rem;
+      color: #666;
+      font-weight: 600;
+      .row {
+        margin-bottom: 6px;
+        & > *::after {
+          content: '·';
+          color: rgb(194, 187, 187);
+          margin: 0 2px;
+        }
+        & > *:last-child::after {
+          content: '';
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &.care-info {
+          color: $grey;
+          font-size: 0.7rem;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

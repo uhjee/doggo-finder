@@ -48,7 +48,7 @@ function App() {
   return (
     <div
       className={`main-container${
-        mainState === APP_STATE.DESC ? ' olive' : ''
+        mainState === APP_STATE.DESC ? ' dark-brown' : ''
       }`}
     >
       <BrowserRouter>

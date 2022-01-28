@@ -2,6 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://openapi.animal.go.kr",
   "dependencies": {
     "dotenv": "^10.0.0",
     "helmet": "^4.6.0",

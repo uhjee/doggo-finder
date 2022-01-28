@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AbandonedDog from './abandonedDog';
 
 import '../../scss/abandonedDogList.scss';
 
-const AbandonedDogList = () => {
+import { getAbandonedDogList } from 'api/abandonedDog';
+
+const AbandonedDogList = ({ kindCd }) => {
+  console.log({ kindCd });
+
+  const [dogList, setDogList] = useState([]);
+
+  useEffect(() => {
+    const res = (async () => await getAbandonedDogList(kindCd))();
+    return () => {
+      setDogList([]);
+    };
+  }, [kindCd]);
   const dummy = [
     {
       kindCd: '[개] 믹스견',

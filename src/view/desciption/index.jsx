@@ -54,7 +54,7 @@ const Description = ({ setMainState, history }) => {
           <p dangerouslySetInnerHTML={{ __html: descInfo.descText }}></p>
         </div>
       </div>
-      <AbandonedDogList />
+      <AbandonedDogList kindCd={descInfo.kindCd} />
       <Button text="테스트 다시 하기" handler={goHome} />
     </div>
   );

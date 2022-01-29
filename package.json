@@ -2,8 +2,11 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://openapi.animal.go.kr",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "dotenv": "^10.0.0",
     "helmet": "^4.6.0",
     "netlify-cli": "^6.9.30",

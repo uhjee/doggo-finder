@@ -7,6 +7,7 @@ import '../../scss/description.scss';
 import { RESULT_DESC_INFO } from 'constant/description';
 import { APP_STATE } from 'constant/stringEnum.js';
 import Button from 'components/Button';
+import Spinner from 'components/Spinner';
 import AbandonedDogList from './abandonedDogList';
 
 import { isNil } from 'utils/commonUtil';
@@ -54,7 +55,9 @@ const Description = ({ setMainState, history }) => {
           <p dangerouslySetInnerHTML={{ __html: descInfo.descText }}></p>
         </div>
       </div>
-      <AbandonedDogList kindCd={descInfo.kindCd} />
+      <Spinner>
+        <AbandonedDogList kindCd={descInfo.kindCd} />
+      </Spinner>
       <Button text="테스트 다시 하기" handler={goHome} />
     </div>
   );

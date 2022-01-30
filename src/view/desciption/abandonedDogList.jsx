@@ -5,8 +5,9 @@ import { isNil, isEmpty } from 'utils/commonUtil';
 import '../../scss/abandonedDogList.scss';
 
 import { getAbandonedDogList } from 'api/abandonedDog';
+import AbandonedDogSkeleton from './abandonedDogSkeleton';
 
-const AbandonedDogList = ({ kindCd }) => {
+const AbandonedDogList = ({ kindCd, setIsLoading }) => {
   const [dogList, setDogList] = useState([]);
 
   /**
@@ -15,22 +16,30 @@ const AbandonedDogList = ({ kindCd }) => {
    */
   useEffect(() => {
     if (!kindCd) return;
-
+    setIsLoading(true); // change spinner flag state
     let _kindCd = kindCd;
     if (kindCd === 'ALL') _kindCd = null;
     const fetchGetAbandonDogList = async () => {
-      const res = await getAbandonedDogList(_kindCd);
-      if (res.ok && res.status === 200) {
-        const { response: data } = await res.json();
-        const { item } = data?.body?.items;
-        if (isNil(item) || isEmpty(item)) setDogList([]);
-        const _dogList = item.map(item => ({
-          ...item,
-          age: item.age.replaceAll('(', '').replaceAll(')', ''), // REGEX로 변경 필요
-          kindCd: item.kindCd.substring(4),
-          sexCd: item.sexCd === 'F' ? '여아' : '남아',
-        }));
-        setDogList(_dogList);
+      try {
+        const res = await getAbandonedDogList(_kindCd);
+        if (res.ok && res.status === 200) {
+          const { response: data } = await res.json();
+          const { item } = data?.body?.items;
+
+          if (isNil(item) || isEmpty(item)) setDogList([]);
+          const _dogList = item.map(item => ({
+            ...item,
+            age: item.age.replaceAll(/(\(|\))/g, ''),
+            kindCd: item.kindCd.substring(4),
+            sexCd: item.sexCd === 'F' ? '여아' : '남아',
+          }));
+          setDogList(_dogList);
+        }
+      } catch (error) {
+        console.log(error);
+        setDogList([]);
+      } finally {
+        setIsLoading(false); // initailize spinner flag state
       }
     };
 
@@ -38,25 +47,28 @@ const AbandonedDogList = ({ kindCd }) => {
     return () => {
       setDogList([]);
     };
-  }, [kindCd]);
+  }, [kindCd, setIsLoading]);
   return (
     <>
-      {!isEmpty(dogList) && (
-        <div className="abandoned-list-box">
-          {dogList.map(dog => (
-            <AbandonedDog
-              key={dog.desertionNo}
-              kindCd={dog.kindCd}
-              careNm={dog.careNm}
-              age={dog.age}
-              orgNm={dog.orgNm}
-              sexCd={dog.sexCd}
-              popfile={dog.popfile}
-              officetel={dog.officetel}
-            />
-          ))}
-        </div>
-      )}
+      <div className="abandoned-list-box">
+        {!isEmpty(dogList)
+          ? dogList.map(dog => (
+              <AbandonedDog
+                key={dog.desertionNo}
+                kindCd={dog.kindCd}
+                careNm={dog.careNm}
+                age={dog.age}
+                orgNm={dog.orgNm}
+                sexCd={dog.sexCd}
+                popfile={dog.popfile}
+                officetel={dog.officetel}
+              />
+            ))
+          : // SKELETON-UI 적용 - api response가 너무 느림
+            new Array(3) // abandonedDogItem 개수 3개 고정
+              .fill(1)
+              .map((_, i) => <AbandonedDogSkeleton key={i} />)}
+      </div>
     </>
   );
 };

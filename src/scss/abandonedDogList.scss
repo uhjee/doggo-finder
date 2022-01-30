@@ -2,6 +2,7 @@
 
 .abandoned-list-box {
   width: 335px;
+  height: 252px;
 
   display: flex;
   flex-direction: column;
@@ -13,12 +14,11 @@
   background-color: #fff;
   font-size: 0.9rem;
   box-sizing: border-box;
-  padding: 10px 16px;
+  padding: 14px 16px;
   // margin-bottom: 12px;
 
   .abandoned-item-box {
-    // border: 1px solid salmon;
-    height: 60px;
+    height: 62px;
     width: 100%;
     margin-bottom: 10px;
     border-bottom: 1px solid #dfd9d9;

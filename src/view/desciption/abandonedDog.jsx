@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { isNil, isEmpty } from 'utils/commonUtil';
+import { isNil } from 'utils/commonUtil';
 
 const AbandonedDog = ({
   kindCd,
@@ -14,14 +14,14 @@ const AbandonedDog = ({
 }) => {
   return (
     <div className="abandoned-item-box">
-      {!isNil(popfile) && !isEmpty(popfile) ? (
+      {!isNil(popfile) ? (
         <img
           className="abandoned-item__img"
           src={popfile}
           alt={kindCd + orgNm}
         />
       ) : (
-        <div className='abandoned-item__empty-img' />
+        <div className="abandoned-item__empty-img" />
       )}
       <div className="abandoned-item__desc">
         <div className="row">

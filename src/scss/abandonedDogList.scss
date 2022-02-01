@@ -51,9 +51,17 @@
       color: #666;
       font-weight: 600;
       .row {
+        width: 238px;
         display: flex;
         align-items: center;
         margin-bottom: 1px;
+
+        & > * {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
         & > *::after {
           content: '·';
           color: rgb(194, 187, 187);

@@ -13,9 +13,7 @@ const Spinner = ({ children }) => {
           <div></div>{' '}
         </div>
       )}
-      {/* <div className={isLoading ? 'my-spinner-content' : ''}> */}
       {cloneElement(children, { setIsLoading })}
-      {/* </div> */}
     </div>
   );
 };

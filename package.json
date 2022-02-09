@@ -7,6 +7,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
+    "axios": "^0.25.0",
     "dotenv": "^10.0.0",
     "helmet": "^4.6.0",
     "netlify-cli": "^6.9.30",
@@ -46,5 +47,6 @@
   "devDependencies": {
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0"
-  }
+  },
+  "proxy": "http://openapi.animal.go.kr"
 }

@@ -21,20 +21,17 @@ const AbandonedDogList = ({ kindCd, setIsLoading }) => {
     if (kindCd === 'ALL') _kindCd = null;
     const fetchGetAbandonDogList = async () => {
       try {
-        const res = await getAbandonedDogList(_kindCd);
-        if (res.ok && res.status === 200) {
-          const { response: data } = await res.json();
-          const { item } = data?.body?.items;
+        const item = await getAbandonedDogList(_kindCd);
+        console.log(item);
 
-          if (isNil(item) || isEmpty(item)) setDogList([]);
-          const _dogList = item.map(item => ({
-            ...item,
-            age: item.age.replaceAll(/(\(|\))/g, ''),
-            kindCd: item.kindCd.substring(4),
-            sexCd: item.sexCd === 'F' ? '여아' : '남아',
-          }));
-          setDogList(_dogList);
-        }
+        if (isNil(item) || isEmpty(item)) setDogList([]);
+        const _dogList = item.map(item => ({
+          ...item,
+          age: item.age.replaceAll(/(\(|\))/g, ''),
+          kindCd: item.kindCd.substring(4),
+          sexCd: item.sexCd === 'F' ? '여아' : '남아',
+        }));
+        setDogList(_dogList);
       } catch (error) {
         console.log(error);
         setDogList([]);

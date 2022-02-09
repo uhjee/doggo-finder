@@ -1,4 +1,5 @@
 import { convertTwoDigitDate } from 'utils/dateUtil';
+import axios from 'axios';
 
 const BASE_URL =
   'http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc';
@@ -32,22 +33,34 @@ const date = convertTwoDigitDate(today.getDate());
 
 const ENDDE = `${year}${month}${date}`;
 
-// const headers = new Headers({
-//   'Content-Type': ''
-// });
-
-const option = {
-  method: 'GET',
-  headers: {
-    'Accept': 'application/json'
-  }
-};
-const PROXY_SERVER = 'https://cors-anywhere.herokuapp.com/';
-
 export const getAbandonedDogList = kindCd => {
-  let url = `${PROXY_SERVER}${BASE_URL}/${OPERS.ABANDONMENT_PUBLIC}?bgnde=${BGNDE}&endde=${ENDDE}&upkind=${UPKIND}&pageNo=${PAGE_NO}&numOfRows=${NUM_OF_ROWS}&serviceKey=${KEY_ENCODING}`;
+  // let url = `${BASE_URL}/${OPERS.ABANDONMENT_PUBLIC}`;
+  let url = `/openapi/service/rest/abandonmentPublicSrvc/${OPERS.ABANDONMENT_PUBLIC}?serviceKey=${KEY_ENCODING}`;
+
+  let params = {
+    bgnde: BGNDE,
+    endde: ENDDE,
+    upkind: UPKIND,
+    pageNo: PAGE_NO,
+    numOfRows: NUM_OF_ROWS,
+  };
   if (kindCd) {
-    url += `&kind=${kindCd}`;
+    params.kindCd = kindCd;
   }
-  return fetch(url, option);
+  return new Promise((resolve, reject) => {
+    axios
+      .get(url, {
+        params,
+      })
+      .then(res => {
+        if (res.data.Error) {
+          reject(res.data.Error);
+        }
+        console.log({ res });
+        resolve(res.data.response.body.items.item);
+      })
+      .catch(error => {
+        reject(error.message);
+      });
+  });
 };

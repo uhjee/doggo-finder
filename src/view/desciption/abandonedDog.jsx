@@ -4,13 +4,13 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { isNil } from 'utils/commonUtil';
 
 const AbandonedDog = ({
-  kindCd,
-  age,
-  sexCd,
-  orgNm,
-  careNm,
-  popfile,
-  officetel,
+  kindCd, // 견종
+  age,    // 생년
+  sexCd,  // 성별
+  orgNm,  // 보관 지역명
+  careNm, // 보관 기관명
+  popfile, // 이미지
+  officetel,  // 보관 기관 번호
 }) => {
   return (
     <div className="abandoned-item-box">

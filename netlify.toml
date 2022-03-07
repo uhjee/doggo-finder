@@ -1,6 +1,6 @@
 # 제품 모드
 [build]
-  command = "npm run build"
+  command = "CI= npm run build"
   functions = "functions" # netlify 서버리스 함수가 작성된 디렉토리
   publish = "build" # 프로젝트 build 번들 디렉토리 지정
 

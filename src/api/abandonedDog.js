@@ -33,11 +33,11 @@ const date = convertTwoDigitDate(today.getDate());
 
 const ENDDE = `${year}${month}${date}`;
 
-export const getAbandonedDogList = kindCd => {
+export const getAbandonedDogList = async kindCd => {
   // let url = `${BASE_URL}/${OPERS.ABANDONMENT_PUBLIC}`;
-  let url = `/openapi/service/rest/abandonmentPublicSrvc/${OPERS.ABANDONMENT_PUBLIC}?serviceKey=${KEY_ENCODING}`;
+  // let url = `/openapi/service/rest/abandonmentPublicSrvc/${OPERS.ABANDONMENT_PUBLIC}?serviceKey=${KEY_ENCODING}`;
 
-  let params = {
+  let payload = {
     bgnde: BGNDE,
     endde: ENDDE,
     upkind: UPKIND,
@@ -45,22 +45,23 @@ export const getAbandonedDogList = kindCd => {
     numOfRows: NUM_OF_ROWS,
   };
   if (kindCd) {
-    params.kindCd = kindCd;
+    payload.kindCd = kindCd;
   }
-  return new Promise((resolve, reject) => {
-    axios
-      .get(url, {
-        params,
-      })
-      .then(res => {
-        if (res.data.Error) {
-          reject(res.data.Error);
-        }
-        console.log({ res });
-        resolve(res.data.response.body.items.item);
-      })
-      .catch(error => {
-        reject(error.message);
-      });
-  });
+  // return new Promise((resolve, reject) => {
+  //   axios
+  //     .get(url, {
+  //       params,
+  //     })
+  //     .then(res => {
+  //       if (res.data.Error) {
+  //         reject(res.data.Error);
+  //       }
+  //       console.log({ res });
+  //       resolve(res.data.response.body.items.item);
+  //     })
+  //     .catch(error => {
+  //       reject(error.message);
+  //     });
+  // });
+  return await axios.post(`/.netlify/functions/abndonedDog`, payload)
 };

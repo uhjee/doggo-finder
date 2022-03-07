@@ -47,6 +47,9 @@ export const getAbandonedDogList = async kindCd => {
   if (kindCd) {
     payload.kindCd = kindCd;
   }
+  /**
+   * 기존 개발 proxy 환경에서 배포 시, netlify serverless functin 기능으로 변경
+   */
   // return new Promise((resolve, reject) => {
   //   axios
   //     .get(url, {
@@ -63,5 +66,5 @@ export const getAbandonedDogList = async kindCd => {
   //       reject(error.message);
   //     });
   // });
-  return await axios.post(`/.netlify/functions/abndonedDog`, payload)
+  return await axios.post(`/.netlify/functions/abandonedDog`, payload)
 };

@@ -13,8 +13,8 @@ import AbandonedDogList from './abandonedDogList';
 import { isNil } from 'utils/commonUtil';
 import { useMainState } from 'common/customHooks.js';
 
-const Description = ({ setMainState, history }) => {
-  useMainState(APP_STATE.DESC, setMainState);
+const Description = ({ history }) => {
+  useMainState(APP_STATE.DESC);
 
   const { dogType } = useParams();
   const [descInfo, setDescInfo] = useState({});
